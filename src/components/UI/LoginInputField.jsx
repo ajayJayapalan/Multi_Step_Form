@@ -20,12 +20,11 @@ function LoginInputField({ placeholder, IconComponent, error, ...rest }) {
 
   return (
     <>
-      <Box px={5}>
+      <Box px={5} width="100%">
         <TextField
           {...rest}
           color="primary"
           error={ error ? true : false}
-          fullWidth
           className={classes.margin}
           placeholder={placeholder}
           InputProps={{

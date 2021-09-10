@@ -8,7 +8,7 @@ import HorizontalLinearStepper from "./HorizontalLinearStepper";
 
 function Register() {
   return (
-    <div>
+    <div style={{marginTop: "5%"}}>
       <BackgroundClip />
       <Container>
         <Paper>

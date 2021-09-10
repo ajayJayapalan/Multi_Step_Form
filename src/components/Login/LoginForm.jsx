@@ -23,7 +23,7 @@ function LoginForm() {
     mode: "all",
     resolver: yupResolver(schema),
   });
-  
+
   return (
     <form onSubmit={handleSubmit((data) => console.log(data))}>
       <Controller
@@ -35,6 +35,7 @@ function LoginForm() {
           fieldState: { error },
         }) => (
           <LoginInputField
+            fullWidth
             id="username"
             value={value}
             onChange={onChange}
@@ -56,6 +57,7 @@ function LoginForm() {
         }) => {
           return (
             <LoginInputField
+              fullWidth
               id="password"
               value={value}
               type="password"
@@ -69,19 +71,6 @@ function LoginForm() {
           );
         }}
       />
-      {/* <LoginInputField
-        value="ajayjaymon"
-        name="username"
-        placeholder="Username"
-        IconComponent={AccountCircleIcon}
-      /> */}
-      {/* <LoginInputField
-        value="password"
-        type="password"
-        name="password"
-        placeholder="Password"
-        IconComponent={LockRoundedIcon}
-      /> */}
       <Box mx={5}>
         <Button type="submit" color="primary" fullWidth variant="contained">
           Login
