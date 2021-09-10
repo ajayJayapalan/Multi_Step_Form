@@ -5,6 +5,7 @@ const useStyle = makeStyles({
     backgroundClip: {
         position: "fixed",
         top:0,
+        zIndex: -1,
         width: "100%",
         height: (height)=>height,
         backgroundColor: "#e0e4f0",
@@ -17,7 +18,6 @@ function BackgroundClip() {
     const classes = useStyle(height);
     return (
         <div className={classes.backgroundClip}>
-            Hello
         </div>
     )
 }
